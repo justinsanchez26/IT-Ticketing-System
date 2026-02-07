@@ -219,3 +219,59 @@
         opacity: 0.6;
         cursor: not-allowed;
     }
+
+.audit-box {
+    margin-top: 14px;
+}
+
+.audit-toggle {
+    border: 1px solid #d1d5db;
+    background: #fff;
+    padding: 10px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.audit-list {
+    margin-top: 10px;
+    display: grid;
+    gap: 10px;
+}
+
+.audit-item {
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 12px;
+    background: #fafafa;
+}
+
+.audit-top {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #6b7280;
+    margin-bottom: 6px;
+}
+
+.audit-action {
+    font-weight: 800;
+    color: #111827;
+}
+
+.audit-values {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    font-size: 12px;
+}
+
+    .audit-values .old {
+        color: #6b7280;
+    }
+
+    .audit-values .new {
+        color: #111827;
+        font-weight: 700;
+    }
+

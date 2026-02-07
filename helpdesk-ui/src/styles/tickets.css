@@ -1,16 +1,121 @@
+.tickets-top {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.filters {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.search {
+    width: 260px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.filters select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: white;
+}
+
 .ticket-table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 20px;
+    margin-top: 16px;
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
-    .ticket-table th,
+    .ticket-table th {
+        text-align: left;
+        font-size: 13px;
+        font-weight: 700;
+        color: #374151;
+        padding: 12px;
+        background: #f9fafb;
+        border-bottom: 1px solid #e5e7eb;
+    }
+
     .ticket-table td {
-        border-bottom: 1px solid #ddd;
-        padding: 10px;
+        color: #111827;
+        padding: 12px;
+        border-bottom: 1px solid #eef2f7;
     }
 
     .ticket-table tr:hover {
-        background: #f5f5f5;
+        background: #f1f5f9;
         cursor: pointer;
     }
+
+.mono {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-size: 13px;
+}
+
+.empty-state {
+    margin-top: 18px;
+    padding: 18px;
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    color: #111827;
+}
+
+.badge {
+    font-size: 12px;
+    padding: 6px 10px;
+    border-radius: 999px;
+    border: 1px solid #e5e7eb;
+    background: #f9fafb;
+    color: #111827;
+    font-weight: 700;
+}
+
+.status-open {
+    background: #eff6ff;
+    border-color: #bfdbfe;
+}
+
+.status-inprogress {
+    background: #fff7ed;
+    border-color: #fed7aa;
+}
+
+.status-resolved {
+    background: #ecfdf5;
+    border-color: #a7f3d0;
+}
+
+.status-closed {
+    background: #f3f4f6;
+    border-color: #d1d5db;
+}
+
+.prio-low {
+    background: #f3f4f6;
+    border-color: #e5e7eb;
+}
+
+.prio-medium {
+    background: #fefce8;
+    border-color: #fde68a;
+}
+
+.prio-high {
+    background: #fff1f2;
+    border-color: #fecdd3;
+}
+
+.prio-urgent {
+    background: #fee2e2;
+    border-color: #fca5a5;
+}

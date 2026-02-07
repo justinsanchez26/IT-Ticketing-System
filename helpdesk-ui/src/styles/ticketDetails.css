@@ -1,0 +1,116 @@
+.ticket-details {
+    max-width: 900px;
+}
+
+.ticket-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.back-btn {
+    border: 1px solid #ccc;
+    background: white;
+    padding: 8px 10px;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.ticket-card,
+.comments-card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 18px;
+    margin-bottom: 18px;
+}
+
+    .ticket-card h2 {
+        margin-top: 0;
+    }
+
+.desc {
+    color: #444;
+    margin: 12px 0 18px;
+    white-space: pre-wrap;
+}
+
+.meta {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+}
+
+.label {
+    display: block;
+    font-size: 12px;
+    color: #777;
+}
+
+.value {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #222;
+}
+
+.comment-list {
+    margin-top: 12px;
+    display: grid;
+    gap: 10px;
+}
+
+.comment {
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 12px;
+    background: #fafafa;
+}
+
+.comment-top {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 6px;
+}
+
+.comment-author {
+    font-weight: 700;
+    color: #222;
+}
+
+.comment-text {
+    white-space: pre-wrap;
+    color: #333;
+}
+
+.empty {
+    color: #666;
+    margin-top: 10px;
+}
+
+.comment-form {
+    margin-top: 14px;
+    display: grid;
+    gap: 10px;
+}
+
+    .comment-form textarea {
+        width: 100%;
+        min-height: 90px;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+    }
+
+    .comment-form button {
+        justify-self: start;
+        padding: 10px 14px;
+        border: none;
+        border-radius: 8px;
+        background: #4da3ff;
+        color: white;
+        cursor: pointer;
+    }

@@ -1,0 +1,13 @@
+.layout {
+    display: flex;
+    min-height: 100vh;
+    background: #1e1e1e; /* page background */
+}
+
+/* MAIN CONTENT AREA */
+.content {
+    flex: 1;
+    padding: 24px;
+    background: #f4f6f9; /* light canvas */
+    color: #1f2937; /* dark readable text */
+}

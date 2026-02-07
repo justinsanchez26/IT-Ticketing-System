@@ -1,0 +1,16 @@
+.ticket-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+    .ticket-table th,
+    .ticket-table td {
+        border-bottom: 1px solid #ddd;
+        padding: 10px;
+    }
+
+    .ticket-table tr:hover {
+        background: #f5f5f5;
+        cursor: pointer;
+    }

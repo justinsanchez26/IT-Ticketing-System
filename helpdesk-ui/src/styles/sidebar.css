@@ -1,0 +1,38 @@
+.sidebar {
+    width: 220px;
+    background: #111;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+    .sidebar h2 {
+        margin-bottom: 20px;
+    }
+
+.user-info {
+    font-size: 12px;
+    margin-bottom: 20px;
+    color: #aaa;
+}
+
+.sidebar nav a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 0;
+}
+
+    .sidebar nav a:hover {
+        color: #4da3ff;
+    }
+
+.logout {
+    margin-top: auto;
+    background: #c0392b;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}

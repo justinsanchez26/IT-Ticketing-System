@@ -1,0 +1,18 @@
+.form {
+    max-width: 500px;
+}
+
+    .form input,
+    .form textarea,
+    .form select {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    .form button {
+        padding: 10px;
+        background: #4da3ff;
+        color: white;
+        border: none;
+    }

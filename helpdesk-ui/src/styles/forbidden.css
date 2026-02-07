@@ -1,0 +1,51 @@
+.forbidden-wrap {
+    min-height: calc(100vh - 40px);
+    display: grid;
+    place-items: center;
+}
+
+.forbidden-card {
+    width: min(520px, 92vw);
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    padding: 18px;
+}
+
+    .forbidden-card h1 {
+        margin: 0 0 8px 0;
+        font-size: 22px;
+        color: #111827;
+    }
+
+    .forbidden-card p {
+        margin: 0;
+        color: #6b7280;
+        font-size: 13px;
+    }
+
+.forbidden-actions {
+    margin-top: 14px;
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.ghost-btn {
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: 1px solid #d1d5db;
+    background: white;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.dark-btn {
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: none;
+    background: #111827;
+    color: white;
+    cursor: pointer;
+    font-weight: 800;
+}

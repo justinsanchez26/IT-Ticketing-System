@@ -5,31 +5,28 @@ const http = axios.create({
     baseURL: import.meta.env.VITE_API_BASE_URL || "https://localhost:7030",
 });
 
-// Attach JWT to every request
 http.interceptors.request.use(
     (config) => {
-        const token = localStorage.getItem("access_token"); // KEEP THIS CONSISTENT
-        if (token) {
-            config.headers.Authorization = `Bearer ${token}`;
-        }
+        const token = localStorage.getItem("access_token");
+        if (token) config.headers.Authorization = `Bearer ${token}`;
         return config;
     },
     (error) => Promise.reject(error)
 );
 
-// Auto logout on auth failure
 http.interceptors.response.use(
     (response) => response,
     (error) => {
         const status = error?.response?.status;
 
-        if (status === 401 || status === 403) {
+        if (status === 401) {
             logout();
+            if (window.location.pathname !== "/login") window.location.href = "/login";
+        }
 
-            // hard redirect so app resets completely
-            if (window.location.pathname !== "/login") {
-                window.location.href = "/login";
-            }
+        if (status === 403) {
+            // don’t logout; just send to access denied
+            if (window.location.pathname !== "/forbidden") window.location.href = "/forbidden";
         }
 
         return Promise.reject(error);

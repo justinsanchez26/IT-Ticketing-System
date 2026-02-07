@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import ProtectedRoute from "./components/ProtectedRoute";
 import Sidebar from "./components/Sidebar";
 import Tickets from "./pages/Tickets";
@@ -9,6 +9,7 @@ import Dashboard from "./pages/Dashboard";
 import AdminUsers from "./pages/AdminUsers";
 import AdminDepartments from "./pages/AdminDepartments";
 import AdminCategories from "./pages/AdminCategories";
+import Forbidden from "./pages/Forbidden";
 import "./styles/layout.css";
 
 function AppLayout() {
@@ -20,11 +21,12 @@ function AppLayout() {
                     <Route path="/tickets" element={<Tickets />} />
                     <Route path="/tickets/new" element={<CreateTicket />} />
                     <Route path="/tickets/:id" element={<TicketDetails />} />
-                    <Route path="*" element={<Navigate to="/tickets" replace />} />
                     <Route path="/dashboard" element={<Dashboard />} />
                     <Route path="/admin/users" element={<AdminUsers />} />
                     <Route path="/admin/departments" element={<AdminDepartments />} />
                     <Route path="/admin/categories" element={<AdminCategories />} />
+                    <Route path="/forbidden" element={<Forbidden />} />
+                    <Route path="*" element={<Navigate to="/tickets" replace />} />
                 </Routes>
             </div>
         </div>
@@ -35,24 +37,16 @@ export default function App() {
     const token = localStorage.getItem("access_token");
 
     return (
-        <BrowserRouter>
-            <Routes>
-                {/* login route */}
-                <Route
-                    path="/"
-                    element={token ? <Navigate to="/tickets" replace /> : <Login />}
-                />
-
-                {/* everything else protected */}
-                <Route
-                    path="/*"
-                    element={
-                        <ProtectedRoute>
-                            <AppLayout />
-                        </ProtectedRoute>
-                    }
-                />
-            </Routes>
-        </BrowserRouter>
+        <Routes>
+            <Route path="/" element={token ? <Navigate to="/tickets" replace /> : <Login />} />
+            <Route
+                path="/*"
+                element={
+                    <ProtectedRoute>
+                        <AppLayout />
+                    </ProtectedRoute>
+                }
+            />
+        </Routes>
     );
 }

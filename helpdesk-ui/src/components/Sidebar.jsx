@@ -8,6 +8,7 @@ export default function Sidebar() {
     const isManager = profile?.role === "Master" || profile?.role === "ITAdmin" || profile?.role === "HRAdmin";
     const isMaster = profile?.role === "Master";
 
+
     const logout = () => {
         // real google logout (clears google session for this app)
         googleLogout();
@@ -32,6 +33,8 @@ export default function Sidebar() {
             <nav>
                 {isManager && <Link to="/dashboard">Dashboard</Link>}
                 {isMaster && <Link to="/admin/users">Users & Roles</Link>}
+                {isMaster && <Link to="/admin/departments">Departments</Link>}
+                {isMaster && <Link to="/admin/categories">Categories</Link>}
                 <Link to="/tickets">Tickets</Link>
                 <Link to="/tickets/new">Create Ticket</Link>
             </nav>

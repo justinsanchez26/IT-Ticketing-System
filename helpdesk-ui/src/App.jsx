@@ -7,6 +7,8 @@ import TicketDetails from "./pages/TicketDetails";
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
 import AdminUsers from "./pages/AdminUsers";
+import AdminDepartments from "./pages/AdminDepartments";
+import AdminCategories from "./pages/AdminCategories";
 import "./styles/layout.css";
 
 function AppLayout() {
@@ -21,6 +23,8 @@ function AppLayout() {
                     <Route path="*" element={<Navigate to="/tickets" replace />} />
                     <Route path="/dashboard" element={<Dashboard />} />
                     <Route path="/admin/users" element={<AdminUsers />} />
+                    <Route path="/admin/departments" element={<AdminDepartments />} />
+                    <Route path="/admin/categories" element={<AdminCategories />} />
                 </Routes>
             </div>
         </div>

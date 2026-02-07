@@ -2,6 +2,19 @@ import { useEffect, useMemo, useState } from "react";
 import api from "../api/axios";
 import "../styles/dashboard.css";
 
+import {
+    Chart as ChartJS,
+    CategoryScale,
+    LinearScale,
+    BarElement,
+    Title,
+    Tooltip,
+    Legend,
+} from "chart.js";
+import { Bar } from "react-chartjs-2";
+
+ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
+
 export default function Dashboard() {
     const profile = useMemo(() => {
         try {
@@ -68,11 +81,37 @@ export default function Dashboard() {
     const s = normalize(summary.byStatus);
     const total = summary.total ?? 0;
 
+    const labels = ["Open", "InProgress", "Resolved", "Closed"];
+    const values = [s.Open, s.InProgress, s.Resolved, s.Closed];
+
+    const chartData = {
+        labels,
+        datasets: [
+            {
+                label: "Tickets",
+                data: values,
+            },
+        ],
+    };
+
+    const chartOptions = {
+        responsive: true,
+        plugins: {
+            legend: { display: false },
+            title: { display: false },
+        },
+        scales: {
+            y: { beginAtZero: true, ticks: { precision: 0 } },
+        },
+    };
+
     return (
         <div className="dash-wrap">
             <div className="dash-top">
-                <h1>Dashboard</h1>
-                <p className="muted">Ticket summary (all departments)</p>
+                <div>
+                    <h1>Dashboard</h1>
+                    <p className="muted">Ticket summary (all departments)</p>
+                </div>
             </div>
 
             <div className="cards">
@@ -99,6 +138,17 @@ export default function Dashboard() {
                 <div className="card">
                     <div className="card-title">Closed</div>
                     <div className="card-value">{s.Closed}</div>
+                </div>
+            </div>
+
+            <div className="panel chart-panel">
+                <div className="panel-top">
+                    <h3>Status chart</h3>
+                    <span className="muted small">Counts by ticket status</span>
+                </div>
+
+                <div className="chart-wrap">
+                    <Bar data={chartData} options={chartOptions} />
                 </div>
             </div>
 

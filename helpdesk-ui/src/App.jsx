@@ -6,6 +6,7 @@ import CreateTicket from "./pages/CreateTicket";
 import TicketDetails from "./pages/TicketDetails";
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
+import AdminUsers from "./pages/AdminUsers";
 import "./styles/layout.css";
 
 function AppLayout() {
@@ -19,6 +20,7 @@ function AppLayout() {
                     <Route path="/tickets/:id" element={<TicketDetails />} />
                     <Route path="*" element={<Navigate to="/tickets" replace />} />
                     <Route path="/dashboard" element={<Dashboard />} />
+                    <Route path="/admin/users" element={<AdminUsers />} />
                 </Routes>
             </div>
         </div>

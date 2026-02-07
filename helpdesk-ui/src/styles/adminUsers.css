@@ -1,0 +1,129 @@
+.admin-wrap {
+	max-width: 1100px;
+}
+
+.admin-top {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	gap: 12px;
+}
+
+.muted {
+	color: #6b7280;
+	font-size: 13px;
+	margin-top: 6px;
+}
+
+.refresh-btn {
+	padding: 10px 12px;
+	border-radius: 8px;
+	border: 1px solid #d1d5db;
+	background: white;
+	cursor: pointer;
+	font-weight: 600;
+}
+
+.error-box {
+	margin-top: 12px;
+	background: #fee2e2;
+	border: 1px solid #fca5a5;
+	color: #7f1d1d;
+	padding: 10px;
+	border-radius: 10px;
+	font-size: 13px;
+}
+
+.table-wrap {
+	margin-top: 14px;
+	background: white;
+	border: 1px solid #e5e7eb;
+	border-radius: 12px;
+	overflow: hidden;
+}
+
+.users-table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+	.users-table th {
+		text-align: left;
+		font-size: 13px;
+		font-weight: 800;
+		color: #374151;
+		padding: 12px;
+		background: #f9fafb;
+		border-bottom: 1px solid #e5e7eb;
+	}
+
+	.users-table td {
+		padding: 12px;
+		border-bottom: 1px solid #eef2f7;
+		color: #111827;
+	}
+
+	.users-table tr:hover {
+		background: #f8fafc;
+	}
+
+	.users-table select {
+		padding: 9px 10px;
+		border: 1px solid #d1d5db;
+		border-radius: 8px;
+		background: white;
+	}
+
+.actions {
+	width: 120px;
+}
+
+.save-btn {
+	padding: 9px 12px;
+	border: none;
+	border-radius: 8px;
+	background: #111827;
+	color: white;
+	cursor: pointer;
+	font-weight: 700;
+}
+
+	.save-btn:disabled {
+		opacity: 0.6;
+		cursor: not-allowed;
+	}
+
+.role-pill {
+	display: inline-block;
+	padding: 6px 10px;
+	border-radius: 999px;
+	font-size: 12px;
+	font-weight: 800;
+	border: 1px solid #e5e7eb;
+	background: #f9fafb;
+}
+
+.role-master {
+	background: #ede9fe;
+	border-color: #ddd6fe;
+}
+
+.role-itadmin {
+	background: #eff6ff;
+	border-color: #bfdbfe;
+}
+
+.role-hradmin {
+	background: #ecfdf5;
+	border-color: #a7f3d0;
+}
+
+.role-enduser {
+	background: #f3f4f6;
+	border-color: #e5e7eb;
+}
+
+.empty {
+	padding: 16px;
+	color: #6b7280;
+}

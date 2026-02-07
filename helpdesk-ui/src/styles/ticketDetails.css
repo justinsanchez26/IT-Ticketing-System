@@ -114,3 +114,108 @@
         color: white;
         cursor: pointer;
     }
+
+.ticket-title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.badges {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.badge {
+    font-size: 12px;
+    padding: 6px 10px;
+    border-radius: 999px;
+    border: 1px solid #e5e7eb;
+    background: #f9fafb;
+    color: #111827;
+    font-weight: 600;
+}
+
+/* status badges */
+.status-open {
+    background: #eff6ff;
+    border-color: #bfdbfe;
+}
+
+.status-inprogress {
+    background: #fff7ed;
+    border-color: #fed7aa;
+}
+
+.status-resolved {
+    background: #ecfdf5;
+    border-color: #a7f3d0;
+}
+
+.status-closed {
+    background: #f3f4f6;
+    border-color: #d1d5db;
+}
+
+/* priority badges */
+.prio-low {
+    background: #f3f4f6;
+    border-color: #e5e7eb;
+}
+
+.prio-medium {
+    background: #fefce8;
+    border-color: #fde68a;
+}
+
+.prio-high {
+    background: #fff1f2;
+    border-color: #fecdd3;
+}
+
+.prio-urgent {
+    background: #fee2e2;
+    border-color: #fca5a5;
+}
+
+.admin-actions {
+    margin-top: 16px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+}
+
+.admin-box label {
+    display: block;
+    font-size: 12px;
+    color: #6b7280;
+    margin-bottom: 6px;
+}
+
+.row {
+    display: flex;
+    gap: 10px;
+}
+
+.admin-box select {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.admin-box button {
+    padding: 10px 14px;
+    border: none;
+    border-radius: 8px;
+    background: #111827;
+    color: white;
+    cursor: pointer;
+}
+
+    .admin-box button:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+    }

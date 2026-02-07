@@ -5,6 +5,7 @@ import Tickets from "./pages/Tickets";
 import CreateTicket from "./pages/CreateTicket";
 import TicketDetails from "./pages/TicketDetails";
 import Login from "./pages/Login";
+import Dashboard from "./pages/Dashboard";
 import "./styles/layout.css";
 
 function AppLayout() {
@@ -17,6 +18,7 @@ function AppLayout() {
                     <Route path="/tickets/new" element={<CreateTicket />} />
                     <Route path="/tickets/:id" element={<TicketDetails />} />
                     <Route path="*" element={<Navigate to="/tickets" replace />} />
+                    <Route path="/dashboard" element={<Dashboard />} />
                 </Routes>
             </div>
         </div>

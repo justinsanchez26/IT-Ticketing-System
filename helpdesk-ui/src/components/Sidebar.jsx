@@ -5,6 +5,7 @@ import "../styles/sidebar.css";
 export default function Sidebar() {
     const navigate = useNavigate();
     const profile = JSON.parse(localStorage.getItem("profile") || "null");
+    const isManager = profile?.role === "Master" || profile?.role === "ITAdmin" || profile?.role === "HRAdmin";
 
     const logout = () => {
         // real google logout (clears google session for this app)
@@ -28,6 +29,7 @@ export default function Sidebar() {
             </div>
 
             <nav>
+                {isManager && <Link to="/dashboard">Dashboard</Link>}
                 <Link to="/tickets">Tickets</Link>
                 <Link to="/tickets/new">Create Ticket</Link>
             </nav>

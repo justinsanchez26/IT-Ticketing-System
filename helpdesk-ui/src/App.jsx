@@ -1,15 +1,17 @@
 import { Routes, Route, Navigate } from "react-router-dom";
 import ProtectedRoute from "./components/ProtectedRoute";
 import Sidebar from "./components/Sidebar";
+
+import Login from "./pages/Login";
 import Tickets from "./pages/Tickets";
 import CreateTicket from "./pages/CreateTicket";
 import TicketDetails from "./pages/TicketDetails";
-import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
 import AdminUsers from "./pages/AdminUsers";
 import AdminDepartments from "./pages/AdminDepartments";
 import AdminCategories from "./pages/AdminCategories";
 import Forbidden from "./pages/Forbidden";
+
 import "./styles/layout.css";
 
 function AppLayout() {
@@ -38,7 +40,11 @@ export default function App() {
 
     return (
         <Routes>
-            <Route path="/" element={token ? <Navigate to="/tickets" replace /> : <Login />} />
+            <Route
+                path="/"
+                element={token ? <Navigate to="/tickets" replace /> : <Login />}
+            />
+
             <Route
                 path="/*"
                 element={

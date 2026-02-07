@@ -64,7 +64,7 @@ export default function CreateTicket() {
             setError("");
             const res = await api.post("/api/tickets", form);
 
-            // Your API might return ticketNumber string or object
+            // Your API might return ticketNumber string or objects
             const ticketNumber =
                 (typeof res.data === "string" && res.data) ||
                 res.data?.ticketNumber ||
